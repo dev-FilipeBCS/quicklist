@@ -28,38 +28,21 @@
     <h1>Compras da semana</h1>
 
     <form>
-      <input type="text" name="item-input" id="item-input" placeholder="Adicione um novo item" required />
+      <input type="text" name="itemInput" id="itemInput" placeholder="Adicione um novo item" required />
 
       <button type="submit">Adicionar item</button>
     </form>
 
     <fieldset id="items">
-      <div class="item-wrapper">
-          <div class="item-background"></div>
-          <img id="checked" src="assets/checked.svg" alt="ícone de check">
-          <input type="checkbox">
-          <div>Item 1</div>
-          <button id="delete"></button>
-          <img id="trash" src="assets/trash.svg" alt="">
-      </div>
-
-      <div class="item-wrapper">
-        <div class="item-background"></div>
-        <img id="checked" src="assets/checked.svg" alt="ícone de check">
-        <input type="checkbox">
-        <div>Item 2</div>
-        <button id="delete"></button>
-        <img id="trash" src="assets/trash.svg" alt="">
-      </div>
     </fieldset>
 
-    <div class="error-msg">
+    <div class="warning-msg">
       <img src="assets/alert.svg" alt="">
       <span>O item foi removido da lista</span>
-      <button id="close"></button>
-      <img src="assets/x.svg" alt="">
+      <button id="close"><img src="assets/x.svg" alt=""></button>
     </div>
   </main>
 
+  <script src="scripts.js"></script>
 </body>
 </html>
