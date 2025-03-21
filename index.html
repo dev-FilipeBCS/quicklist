@@ -1,38 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quicklist</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="flex">
+  <header>
     <img src="assets/logo.svg" alt="Quicklist logo">
     <span>quicklist</span>
   </header>
 
-  <div id="goback">
-    <a href="#">
-      <img src="assets/voltar.svg" alt="">
-    </a>
-  </div>
-
-  <h1>Compras da semana</h1>
-
   <main>
-    <form flex>
-      <input type="text" name="item" id="item" placeholder="" required />
+    <div id="goback">
+      <a href="#">
+        <img src="assets/voltar.svg" alt="">
+      </a>
+    </div>
+  
+    <h1>Compras da semana</h1>
+
+    <form>
+      <input type="text" name="item-input" id="item-input" placeholder="Adicione um novo item" required />
 
       <button type="submit">Adicionar item</button>
     </form>
 
-      <ul>
-        
-      </ul>
+    <fieldset id="items">
+      <div class="item-wrapper">
+          <div class="item-background"></div>
+          <img id="checked" src="assets/checked.svg" alt="ícone de check">
+          <input type="checkbox">
+          <div>Item 1</div>
+          <button id="delete"></button>
+          <img id="trash" src="assets/trash.svg" alt="">
+      </div>
 
-      <div id="error-msg"></div>
+      <div class="item-wrapper">
+        <div class="item-background"></div>
+        <img id="checked" src="assets/checked.svg" alt="ícone de check">
+        <input type="checkbox">
+        <div>Item 2</div>
+        <button id="delete"></button>
+        <img id="trash" src="assets/trash.svg" alt="">
+      </div>
+    </fieldset>
+
+    <div class="error-msg">
+      <img src="assets/alert.svg" alt="">
+      <span>O item foi removido da lista</span>
+      <button id="close"></button>
+      <img src="assets/x.svg" alt="">
+    </div>
   </main>
 
 </body>
